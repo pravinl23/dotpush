@@ -1,18 +1,16 @@
 {
-    "manifest_version": 3,
-    "name": "DotPush",
-    "version": "1.0",
-    "description": "Auto-push completed LeetCode problems to GitHub.",
-    "permissions": ["activeTab", "scripting"],
-    "action": {
-      "default_popup": "popup.html"
-    },
-    "content_scripts": [
-      {
-        "matches": ["https://leetcode.com/problems/*"],
-        "js": ["content.js"],
-        "run_at": "document_idle"
-      }
-    ]
+  "manifest_version": 3,
+  "name": "DotPush",
+  "version": "1.0",
+  "description": "Auto-push completed LeetCode problems to GitHub.",
+  "permissions": [
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://leetcode.com/problems/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
   }
-  
+}
